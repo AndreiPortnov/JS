@@ -22,6 +22,8 @@ public class UserDaoImpl implements UserDao {
     @Override
     public void updateUser(User user) {
         entityManager.merge(user);
+//        User email = entityManager.createQuery("select u from User u where u.email = :email", User.class).setParameter("email", user.getEmail()).getSingleResult();
+//        email.setFirstName(user.getFirstName());
     }
 
     @Override

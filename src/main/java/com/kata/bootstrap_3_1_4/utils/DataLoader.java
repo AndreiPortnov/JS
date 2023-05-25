@@ -1,11 +1,10 @@
 package com.kata.bootstrap_3_1_4.utils;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import com.kata.bootstrap_3_1_4.model.Role;
 import com.kata.bootstrap_3_1_4.model.User;
 import com.kata.bootstrap_3_1_4.service.RoleService;
 import com.kata.bootstrap_3_1_4.service.UserService;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import java.util.HashSet;
@@ -17,7 +16,7 @@ public class DataLoader {
     private final UserService userService;
     private final RoleService roleService;
 
-    @Autowired
+
     public DataLoader(UserService userService, RoleService roleService) {
         this.userService = userService;
         this.roleService = roleService;
