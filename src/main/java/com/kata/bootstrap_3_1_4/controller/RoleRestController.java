@@ -2,7 +2,6 @@ package com.kata.bootstrap_3_1_4.controller;
 
 import com.kata.bootstrap_3_1_4.model.Role;
 import com.kata.bootstrap_3_1_4.service.RoleService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -18,7 +17,7 @@ public class RoleRestController {
 
     private final RoleService roleService;
 
-    @Autowired
+
     public RoleRestController(RoleService roleService) {
         this.roleService = roleService;
     }

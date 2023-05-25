@@ -14,7 +14,6 @@ public class RoleServiceImpl implements RoleService {
 
     private final RoleDao roleDao;
 
-
     public RoleServiceImpl(RoleDao roleDao) {
         this.roleDao = roleDao;
     }

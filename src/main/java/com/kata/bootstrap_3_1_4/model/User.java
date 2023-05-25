@@ -1,6 +1,7 @@
 package com.kata.bootstrap_3_1_4.model;
 
 
+import org.springframework.lang.NonNull;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -20,18 +21,23 @@ public class User implements UserDetails {
     private Long id;
 
     @Column(name = "first_name")
+    @NonNull
     private String firstName;
 
     @Column(name = "last_name")
+    @NonNull
     private String lastName;
 
     @Column(name = "age")
+    @NonNull
     private Integer age;
 
     @Column(name = "email")
+    @NonNull
     private String email;
 
     @Column(name = "password")
+    @NonNull
     private String password;
 
 
@@ -41,6 +47,7 @@ public class User implements UserDetails {
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id")
     )
+    @NonNull
     private Set<Role> roles = new HashSet<>();
 
     public User() {
